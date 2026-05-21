@@ -69,7 +69,7 @@ function FeatureSection() {
           height={760}
           src="/pictures/kart.png"
           imageClassName="scale-[1.15]"
-          className="mt-16 h-144 sm:h-auto sm:w-304"
+          className="mx-auto mt-16 h-56 w-full max-w-xs sm:h-auto sm:max-w-none sm:w-304"
         />
       </Container>
     </div>
