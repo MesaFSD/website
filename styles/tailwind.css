@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: Switzer, system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+
+  --animate-marker-pulse: marker-pulse 2s ease-in-out infinite;
+}
+
+@keyframes move-x {
+  0% {
+    transform: translateX(var(--move-x-from));
+  }
+  100% {
+    transform: translateX(var(--move-x-to));
+  }
+}
+
+@keyframes marker-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
