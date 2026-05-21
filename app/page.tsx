@@ -18,12 +18,9 @@ import { RacingHeroBackground } from '@/components/racing-hero'
 import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
+import { homeMetadata } from '@/lib/site-metadata'
 
-export const metadata: Metadata = {
-  description:
-    "San Diego Mesa College's Full-Self Driving Club — building fully autonomous vehicles with Team Inspiration for the Autonomous Karting Series.",
-}
+export const metadata = homeMetadata
 
 function Hero() {
   return (

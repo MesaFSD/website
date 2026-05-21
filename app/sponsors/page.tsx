@@ -4,13 +4,14 @@ import { Footer } from '@/components/footer'
 import { TealGradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/site-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Sponsors',
   description:
-    'Support MesaFSD — San Diego Mesa College\'s Full-Self Driving Club. Partner with us to build the next generation of autonomous systems engineers.',
-}
+    'Partner with MesaFSD to support community college students in robotics, AI, and engineering — sponsor our autonomous kart, lab, and competition travel.',
+  path: '/sponsors',
+})
 
 function Header() {
   return (

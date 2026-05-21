@@ -5,13 +5,14 @@ import { TealGradientBackground } from '@/components/gradient'
 import { LogoCloud } from '@/components/logo-cloud'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/site-metadata'
 
-export const metadata: Metadata = {
-  title: 'Join MesaFSD',
+export const metadata = createPageMetadata({
+  title: 'Join',
   description:
-    'Apply to join MesaFSD, San Diego Mesa College\'s premier autonomous robotics club.',
-}
+    'Apply to join MesaFSD — Electrical, Software, Mechanical, or Business. No prior experience required; work sessions on campus at San Diego Mesa College.',
+  path: '/apply',
+})
 
 const APPLICATION_FORM_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSeCGyePZAsW5Xd__y1kxaLlng2MDQ2ZtQOZAwXOEirJe5bm_w/viewform?usp=dialog'

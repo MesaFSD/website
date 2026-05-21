@@ -1,11 +1,14 @@
+import { defaultDescription, sharedMetadata, siteName } from '@/lib/site-metadata'
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  ...sharedMetadata,
   title: {
-    template: '%s - MesaFSD',
-    default: 'MesaFSD - Full-Self Driving Club',
+    template: `%s - ${siteName}`,
+    default: `${siteName} — Full-Self Driving Club`,
   },
+  description: defaultDescription,
 }
 
 export default function RootLayout({

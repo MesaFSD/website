@@ -5,13 +5,14 @@ import { Footer } from '@/components/footer'
 import { TealGradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
-import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/site-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'About',
   description:
     'MesaFSD gives advanced community college students a path to industry experience and prepares them for university-level engineering—we build and race a fully autonomous go-kart across Electrical, Software, Mechanical, and Business.',
-}
+  path: '/about',
+})
 
 function AboutHero() {
   return (

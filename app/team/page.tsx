@@ -7,13 +7,14 @@ import { Navbar } from '@/components/navbar'
 import { TeamPerson } from '@/components/team-person'
 import { Heading, Lead, Subheading } from '@/components/text'
 import { getLeaders, getTeamMembersExcludingLeaders, type TeamMember } from '@/lib/team-members'
-import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/site-metadata'
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Team',
   description:
-    "Meet the MesaFSD team — San Diego Mesa College's Full-Self Driving Club.",
-}
+    "Meet the MesaFSD officers and members — San Diego Mesa College's Full-Self Driving Club building an autonomous go-kart.",
+  path: '/team',
+})
 
 const previousYearsTeams: Array<{
   year: string
