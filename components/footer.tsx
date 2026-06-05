@@ -172,7 +172,7 @@ function Copyright() {
 
 export function Footer({ variant = 'default' }: { variant?: 'default' | 'sponsors' } = {}) {
   return (
-    <footer className="bg-gray-900/50 ring-1 ring-white/10">
+    <footer className="bg-gray-950">
       <CallToAction variant={variant} />
       <Container variant="hero">
         <PlusGrid className="pb-16">
