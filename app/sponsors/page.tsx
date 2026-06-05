@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
   path: '/sponsors',
 })
 
-function Header() {
+function Intro() {
   return (
     <Container variant="hero" className="mt-16">
       <Heading as="h1" className="mt-2 text-white">
@@ -22,14 +22,7 @@ function Header() {
       <Lead className="mt-6 max-w-3xl text-gray-300">
         Your support enables community college students to get hands-on experience in engineering, robotics, AI, and business.
       </Lead>
-    </Container>
-  )
-}
-
-function SponsorCta() {
-  return (
-    <Container className="mt-24">
-      <p className="max-w-2xl text-sm/6 text-gray-300">
+      <p className="mt-10 max-w-2xl text-sm/6 text-gray-300">
         We're building industry partnerships to fund our kart, lab space, and competition travel. If you're interested in sponsoring MesaFSD or partnering with us, we'd love to hear from you.
       </p>
       <div className="mt-10">
@@ -61,7 +54,7 @@ const impactItems = [
 
 function Impact() {
   return (
-    <Container className="mt-32 pb-32">
+    <Container variant="hero" className="mt-32 pb-32">
       <Subheading className="text-[#00BFB4]">Impact</Subheading>
       <Heading as="h2" className="mt-2 text-white">
         Your donation goes far.
@@ -133,8 +126,7 @@ export default function Sponsors() {
           <Navbar dark />
         </Container>
       </div>
-      <Header />
-      <SponsorCta />
+      <Intro />
       <Impact />
       <Footer variant="sponsors" />
     </main>
