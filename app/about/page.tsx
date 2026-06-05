@@ -78,7 +78,7 @@ function AboutContent() {
           <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-700 pb-4">
             <dt className="text-sm/6 text-gray-300">Members</dt>
             <dd className="order-first text-6xl font-medium tracking-tight text-white">
-              <AnimatedNumber start={20} end={25} />+
+              <AnimatedNumber start={24} end={28} />+
             </dd>
           </div>
           <div className="flex flex-col gap-y-2 border-b border-dotted border-gray-700 pb-4">
@@ -96,7 +96,7 @@ function AboutContent() {
           <div className="flex flex-col gap-y-2">
             <dt className="text-sm/6 text-gray-300">Partner Organizations</dt>
             <dd className="order-first text-6xl font-medium tracking-tight text-white">
-              <AnimatedNumber start={0} end={5} />+
+              <AnimatedNumber start={4} end={6} />+
             </dd>
           </div>
         </dl>
