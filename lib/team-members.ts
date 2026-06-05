@@ -35,7 +35,7 @@ const roster2026_2027: TeamYearRoster = {
       name: 'Jad Assaad',
       description: 'Vice President / Mechanical',
       img: '/team/jad-assad.webp',
-      link: '',
+      link: 'https://www.linkedin.com/in/jad-assaad-766130270/',
     },
     {
       name: 'Kseniia Oblasova',
@@ -187,7 +187,7 @@ const roster2025_2026: TeamYearRoster = {
       name: 'Jad Assaad',
       description: 'Mechanical',
       img: '/team/jad-assad.webp',
-      link: '',
+      link: 'https://www.linkedin.com/in/jad-assaad-766130270/',
     },
     {
       name: 'Santiago Gonzalez',
