@@ -206,7 +206,7 @@ function FrequentlyAskedQuestions() {
               When and where are the meetings for my team?
             </dt>
             <dd className="mt-4 text-sm/6 text-gray-300">
-              Some meetings and work sessions are held in the Innovation Research Lab (Room B106) on Mesa Campus while others are held remotely. Depending on scheduling, meeting times may vary between semesters. You can find the current meeting times on our{' '}
+              Depending on the team, meetings and work sessions are either held in the Team Inspiration Lab in Poway, the Innovation Research Lab (Room B106) on Mesa Campus, or remotely via Google Meet. Depending on scheduling, meeting times may vary between semesters. You can find the current meeting times on our{' '}
               <a
                 href="https://discord.gg/javuzE2f4r"
                 target="_blank"

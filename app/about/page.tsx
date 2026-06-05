@@ -32,20 +32,20 @@ function AboutHero() {
 
 function AboutContent() {
   return (
-    <Container variant="hero" className="mt-24 pb-24 lg:pb-32">
+    <Container variant="hero" className="mt-32 pb-24 lg:mt-44 lg:pb-32">
       <section className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
-        <div className="order-2 lg:order-1">
+        <div className="order-2 pt-4 lg:order-1 lg:pt-20">
           <div className="grid grid-cols-2 gap-4 lg:gap-6 xl:gap-8">
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10">
               <img alt="" src="/club/1.webp" className="block size-full object-cover" />
             </div>
-            <div className="-mt-6 aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 sm:-mt-10 lg:-mt-24 xl:-mt-28">
+            <div className="-mt-4 aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 sm:-mt-6 lg:-mt-10 xl:-mt-12">
               <img alt="" src="/club/2.webp" className="block size-full object-cover" />
             </div>
             <div className="aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10">
               <img alt="" src="/club/3.webp" className="block size-full object-cover" />
             </div>
-            <div className="-mt-6 aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 sm:-mt-10 lg:-mt-24 xl:-mt-28">
+            <div className="-mt-4 aspect-square overflow-hidden rounded-xl shadow-xl ring-1 ring-white/10 sm:-mt-6 lg:-mt-10 xl:-mt-12">
               <img alt="" src="/club/4.webp" className="block size-full object-cover" />
             </div>
           </div>
