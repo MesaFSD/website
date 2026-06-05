@@ -41,17 +41,19 @@ export function TeamPerson({
 }: TeamMember & { variant?: 'default' | 'leader' }) {
   const isLeader = variant === 'leader'
   const text = (
-    <div className={`min-w-0 text-sm/6 ${isLeader ? 'text-center' : ''}`}>
+    <div className={isLeader ? 'w-full text-center text-sm/6' : 'min-w-0 text-sm/6'}>
       <h3
         className={
           isLeader
-            ? 'text-lg font-semibold tracking-tight text-white sm:text-xl'
+            ? 'text-lg font-semibold tracking-tight text-balance text-white sm:text-xl'
             : 'font-medium text-white'
         }
       >
         {name}
       </h3>
-      <p className={isLeader ? 'mt-1 text-gray-300' : 'text-gray-300'}>{description}</p>
+      <p className={isLeader ? 'mt-1 text-balance text-gray-300' : 'text-gray-300'}>
+        {description}
+      </p>
     </div>
   )
 
@@ -63,20 +65,17 @@ export function TeamPerson({
   )
 
   if (isLeader) {
+    const cardClassName =
+      'flex w-full min-w-0 flex-col items-center gap-4 transition-opacity hover:opacity-90'
     const card = link ? (
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col items-center gap-4 transition-opacity hover:opacity-90"
-      >
+      <a href={link} target="_blank" rel="noopener noreferrer" className={cardClassName}>
         {inner}
       </a>
     ) : (
-      <div className="flex flex-col items-center gap-4">{inner}</div>
+      <div className={cardClassName}>{inner}</div>
     )
     return (
-      <li className="flex flex-col rounded-2xl bg-linear-to-b from-white/10 to-white/5 p-6 ring-1 ring-white/15 sm:p-8">
+      <li className="flex min-w-0 flex-col rounded-2xl bg-linear-to-b from-white/10 to-white/5 p-6 ring-1 ring-white/15 sm:p-8">
         {card}
       </li>
     )

@@ -172,34 +172,32 @@ function Copyright() {
 
 export function Footer({ variant = 'default' }: { variant?: 'default' | 'sponsors' } = {}) {
   return (
-    <footer className="bg-gray-950">
-      <div className="mx-2 mt-2 rounded-4xl bg-gray-900/50 ring-1 ring-white/10">
-        <Container>
-          <CallToAction variant={variant} />
-          <PlusGrid className="pb-16">
-            <PlusGridRow>
-              <div className="flex flex-col gap-10 pb-6 pt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 lg:gap-12">
-                <PlusGridItem>
-                  <Link href="/" title="Home" className="block">
-                    <LogoLight />
-                  </Link>
-                </PlusGridItem>
-                <PlusGridItem className="sm:flex sm:flex-1 sm:justify-end">
-                  <Sitemap />
-                </PlusGridItem>
-              </div>
-            </PlusGridRow>
-            <PlusGridRow className="flex flex-col gap-4 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between sm:py-4">
-              <PlusGridItem>
-                <Copyright />
+    <footer className="bg-gray-900/50 ring-1 ring-white/10">
+      <CallToAction variant={variant} />
+      <Container variant="hero">
+        <PlusGrid className="pb-16">
+          <PlusGridRow>
+            <div className="flex flex-col gap-10 pb-6 pt-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8 lg:gap-12">
+              <PlusGridItem className="py-3">
+                <Link href="/" title="Home" className="block">
+                  <LogoLight />
+                </Link>
               </PlusGridItem>
-              <PlusGridItem className="flex gap-8">
-                <SocialLinks />
+              <PlusGridItem className="sm:flex sm:flex-1 sm:justify-end">
+                <Sitemap />
               </PlusGridItem>
-            </PlusGridRow>
-          </PlusGrid>
-        </Container>
-      </div>
+            </div>
+          </PlusGridRow>
+          <PlusGridRow className="flex flex-col gap-4 border-t border-white/10 py-6 sm:flex-row sm:items-center sm:justify-between sm:py-4">
+            <PlusGridItem>
+              <Copyright />
+            </PlusGridItem>
+            <PlusGridItem className="flex gap-8">
+              <SocialLinks />
+            </PlusGridItem>
+          </PlusGridRow>
+        </PlusGrid>
+      </Container>
     </footer>
   )
 }

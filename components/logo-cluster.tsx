@@ -39,13 +39,19 @@ function Circle({
   )
 }
 
+const circles = [
+  { size: 528, opacity: '3%', delay: 0.45 },
+  { size: 400, opacity: '5%', delay: 0.3 },
+  { size: 272, opacity: '5%', delay: 0.15 },
+  { size: 144, opacity: '10%', delay: 0 },
+] as const
+
 function Circles() {
   return (
     <div className="absolute inset-0">
-      <Circle size={528} opacity="3%" delay={0.45} />
-      <Circle size={400} opacity="5%" delay={0.3} />
-      <Circle size={272} opacity="5%" delay={0.15} />
-      <Circle size={144} opacity="10%" delay={0} />
+      {circles.map((circle) => (
+        <Circle key={circle.size} {...circle} />
+      ))}
       <div className="absolute inset-0 bg-linear-to-t from-white to-35%" />
     </div>
   )
@@ -106,32 +112,38 @@ function Logo({
   )
 }
 
+const partnerLogos = [
+  {
+    src: '/logo-cloud/teaminspiration.png',
+    left: 144,
+    top: 40,
+    hover: { x: -2, y: -5, rotate: -6, delay: 0.15 },
+  },
+  {
+    src: '/logo-cloud/asta.svg',
+    left: 290,
+    top: 196,
+    hover: { x: 4, y: 5, rotate: -6, delay: 0.25 },
+  },
+  {
+    src: '/logo-cluster/tritonai.png',
+    left: 96,
+    top: 176,
+    hover: { x: -3, y: 5, rotate: 3, delay: 0.15 },
+    imgSize: 'size-9',
+    objectFit: 'contain' as const,
+  },
+] as const
+
 export function LogoCluster() {
   return (
     <div aria-hidden="true" className="relative h-full overflow-hidden">
       <Circles />
       <div className="absolute left-1/2 h-full w-104 -translate-x-1/2">
         <MainLogo />
-        <Logo
-          src="/logo-cloud/teaminspiration.png"
-          left={144}
-          top={40}
-          hover={{ x: -2, y: -5, rotate: -6, delay: 0.15 }}
-        />
-        <Logo
-          src="/logo-cloud/asta.svg"
-          left={290}
-          top={196}
-          hover={{ x: 4, y: 5, rotate: -6, delay: 0.25 }}
-        />
-        <Logo
-          src="/logo-cluster/tritonai.png"
-          left={96}
-          top={176}
-          hover={{ x: -3, y: 5, rotate: 3, delay: 0.15 }}
-          imgSize="size-9"
-          objectFit="contain"
-        />
+        {partnerLogos.map((logo) => (
+          <Logo key={logo.src} {...logo} />
+        ))}
       </div>
     </div>
   )

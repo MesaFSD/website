@@ -6,7 +6,11 @@ import { TealGradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { TeamPerson } from '@/components/team-person'
 import { Heading, Lead, Subheading } from '@/components/text'
-import { getLeaders, getTeamMembersExcludingLeaders, type TeamMember } from '@/lib/team-members'
+import {
+  getLeaders,
+  getPreviousYearRosters,
+  getTeamMembersExcludingLeaders,
+} from '@/lib/team-members'
 import { createPageMetadata } from '@/lib/site-metadata'
 
 export const metadata = createPageMetadata({
@@ -16,15 +20,10 @@ export const metadata = createPageMetadata({
   path: '/team',
 })
 
-const previousYearsTeams: Array<{
-  year: string
-  officers: TeamMember[]
-  teamMembers: TeamMember[]
-}> = []
-
 export default function TeamPage() {
   const leaders = getLeaders()
   const members = getTeamMembersExcludingLeaders()
+  const previousYearsTeams = getPreviousYearRosters()
 
   return (
     <main className="overflow-hidden bg-gray-950">
@@ -45,11 +44,11 @@ export default function TeamPage() {
         </Lead>
       </Container>
 
-      <Container className="mt-20 pb-16">
+      <Container variant="hero" className="mt-20 pb-16">
         <Subheading className="text-[#00BFB4]">Leadership</Subheading>
         <ul
           role="list"
-          className="mx-auto mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+          className="mx-auto mt-12 grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8"
         >
           {leaders.map((person) => (
             <TeamPerson key={person.name} {...person} variant="leader" />
@@ -57,14 +56,14 @@ export default function TeamPage() {
         </ul>
       </Container>
 
-      <Container className="pb-32">
+      <Container variant="hero" className="pb-32">
         <Subheading as="h2" className="text-[#00BFB4]">
           Members
         </Subheading>
         <hr className="mt-6 border-t border-gray-700" />
         <ul
           role="list"
-          className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="mx-auto mt-16 grid min-w-0 grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {members.map((person) => (
             <TeamPerson key={person.name} {...person} />
